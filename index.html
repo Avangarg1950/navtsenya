@@ -99,6 +99,34 @@
                 opacity: 1;
             }
         }
+        @media only screen and (max-width: 600px) {
+            .card {
+                animation: fadeInMobile 1s ease-out;
+            }
+            .name, .title, .contact {
+                animation: slideInMobile 1s ease-out;
+            }
+            @keyframes fadeInMobile {
+                from {
+                    opacity: 0;
+                    transform: scale(0.8);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+            @keyframes slideInMobile {
+                from {
+                    transform: translateX(-50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
     </style>
 </head>
 <body>
