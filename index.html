@@ -14,7 +14,24 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease-out;
+            position: relative;
+        }
+        body:hover {
+            background-color: #fff;
+        }
+        body:hover:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url("https://i.imgur.com/uti3iza.jpeg") repeat;
+            background-position: 0% 0%;
+            background-size: 150px;
+            animation: move 30s ease-out;
+            z-index: 0;
         }
         .card {
             background: white;
@@ -23,25 +40,27 @@
             padding: 20px;
             width: 300px;
             text-align: center;
-            animation: fadeIn 1s ease;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 1;
         }
         .name {
             font-size: 24px;
             font-weight: bold;
             color: #333;
-            animation: slideIn 1s ease;
+            animation: slideIn 1s ease-out;
         }
         .title {
             font-size: 18px;
             color: #666;
             margin: 10px 0;
-            animation: slideIn 1s ease;
+            animation: slideIn 1s ease-out;
         }
         .contact {
             margin: 15px 0;
             font-size: 16px;
             color: #444;
-            animation: slideIn 1s ease;
+            animation: slideIn 1s ease-out;
         }
         .socials a {
             text-decoration: none;
@@ -52,6 +71,14 @@
         .socials a:hover {
             text-decoration: underline;
             color: #0055FF;
+        }
+        @keyframes move {
+            from {
+                background-position: 0% 0%;
+            }
+            to {
+                background-position: 100% 0%;
+            }
         }
         @keyframes fadeIn {
             from {
@@ -86,3 +113,4 @@
     </div>
 </body>
 </html>
+
