@@ -21,7 +21,7 @@ body:hover:before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url("/path/to/your/image.jpg") repeat;
+    background: url("/Users/artemkukolev/Desktop/кодинг/HTML/navtsenya/images/Тёма.jpg") repeat;
     background-position: 0% 0%;
     background-size: 150px;
     animation: move 30s ease-out;
